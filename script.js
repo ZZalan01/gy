@@ -13,7 +13,8 @@ fetch("https://pizza.kando-dev.eu/Pizza").then(function(adatok){
                     <h6 class="card-subtitle mb-2 text-muted">Gluténmentes: ${adatok[i].isGlutenFree ? "Igen" : "Nem"}</h6>
                     <h5 class="card-title">Ár: ${adatok[i].id * "18"}  </h5>
                     <button>Kosárba</button>
-                    <button id="reszlet">Részletek</button>
+                    <button id="reszlet" onclick="SingleData()">Részletek</button>
+                    <button id="torol" onclick="Delete(${adatok[i].id})">Törlés</button>
                 </div>
                 </div>
                 </div>`
